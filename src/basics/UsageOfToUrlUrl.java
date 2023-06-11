@@ -5,17 +5,21 @@ import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import net.bytebuddy.implementation.bytecode.Throw;
+
 import org.openqa.selenium.By;
 
 public class UsageOfToUrlUrl {
+	public static void main(String[]a) throws MalformedURLException {
+		Throw InterruptedException, MalformedURLException;
 	
-	 throws InterruptedException, MalformedURLException
 	 {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
-		driver.get("https://wwww.dassault-aviation.com/en/");
-		URL mainUrl = new URL("https://wwww.dassault-aviation.com/en/");
+		driver.get("https://www.dassault-aviation.com/en/");
+		URL mainUrl = new URL("https://www.dassault-aviation.com/en/");
 		//build the group page URL 
 		URL groupPageUrl = new URL(mainUrl,"group/");
 		// build the defense page URL 
@@ -28,8 +32,7 @@ public class UsageOfToUrlUrl {
 		// passion page url
 		URL passionPageUrl = new URL(mainUrl,"passion/");
 		
-		Thread.sleep(2000);
-	}
-}
-
-
+		
+		driver.quit();
+	 }
+	}}
